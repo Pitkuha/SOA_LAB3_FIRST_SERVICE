@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
+    @RequestMapping(value = "/actuator/health")
+    public String consul(){
+        return "Ok";
+    }
+
     @RequestMapping(value = "/soa-lab2", method = RequestMethod.GET)
     public String get() {
         return "/index.html";

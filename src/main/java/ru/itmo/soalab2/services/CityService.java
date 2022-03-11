@@ -118,6 +118,7 @@ public class CityService {
     }
 
     public ResponseEntity<City> doGenocide(long id){
+
         City min = cityRepository.findCityWithMinPop();
         City cur = cityRepository.findById(id);
         cityRepository.ch2(cur.getPopulation(),min.getId());

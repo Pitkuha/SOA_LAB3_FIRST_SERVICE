@@ -68,6 +68,7 @@ public class CitiesController {
 
     @GetMapping(value = "/doGenocide/{id}")
     ResponseEntity<?> doGenocide(@PathVariable long id){
+        System.out.println("Получили данные на геноцид, производим");
         return cityService.doGenocide(id);
     }
 }
